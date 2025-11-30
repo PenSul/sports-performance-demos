@@ -12,9 +12,11 @@ A comprehensive React-based demo application showcasing the UI/UX implementation
 - [Installation](#installation)
 - [Running the Application](#running-the-application)
 - [Demo Usage Guide](#demo-usage-guide)
+- [Testing](#testing)
 - [Project Structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Troubleshooting](#troubleshooting)
+- [Team Information](#team-information)
 
 ---
 
@@ -63,7 +65,7 @@ npm --version
 2. **Navigate to the project directory**
 
    ```bash
-   cd sports-performance-demo
+   cd sports-performance-demos
    ```
 
 3. **Install dependencies**
@@ -89,6 +91,7 @@ The application will be available at:
 ```
 http://localhost:5173
 ```
+
 ---
 
 ## Demo Usage Guide
@@ -162,6 +165,36 @@ Once the application is running, you'll see a navigation menu. Click on any demo
 
 ---
 
+## Testing
+
+This project includes a comprehensive testing suite covering Unit Tests, Component Tests, System Tests, and User Acceptance Tests (UAT).
+
+### Quick Start
+
+```bash
+# Run all tests
+npm test
+
+# Run tests with coverage report
+npm run test:coverage
+
+# Run tests in watch mode (development)
+npm run test:watch
+```
+
+### Testing Documentation
+
+For detailed information about our testing strategy, including how to run specific test suites and how our tests reflect the implementation approach described in our project report, please refer to the **[Testing Documentation](src/tests/README.md)**.
+
+The testing documentation covers:
+- Four-level testing strategy (Unit, Component, System, UAT)
+- How testing validates our mock data implementation
+- Test coverage targets and reporting
+- Mapping tests to use case scenarios
+- Writing new tests and naming conventions
+
+---
+
 ## Project Structure
 
 ```
@@ -169,14 +202,21 @@ sports-performance-analytics/
 ├── public/
 │   └── vite.svg
 ├── src/
-|   ├── assets/
-│   │   ├── react.svg
+│   ├── assets/
+│   │   └── react.svg
 │   ├── components/
 │   │   ├── Demo1_AuthenticateUser.jsx
 │   │   ├── Demo2_PerformanceDashboard.jsx
 │   │   ├── Demo3_ManageAthleteProfiles.jsx
 │   │   ├── Demo4_AnalyzePerformanceTrends.jsx
 │   │   └── Demo5_GeneratePerformanceReport.jsx
+│   ├── tests/
+│   │   ├── README.md              # Testing documentation
+│   │   ├── setup.js               # Test environment configuration
+│   │   ├── unit/                  # Unit tests
+│   │   ├── component/             # Component tests
+│   │   ├── system/                # System integration tests
+│   │   └── uat/                   # User acceptance tests
 │   ├── App.jsx
 │   ├── index.css
 │   └── main.jsx
@@ -184,6 +224,7 @@ sports-performance-analytics/
 ├── package.json
 ├── postcss.config.js
 ├── tailwind.config.js
+├── vitest.config.js
 ├── vite.config.js
 └── README.md
 ```
@@ -200,6 +241,8 @@ sports-performance-analytics/
 | Recharts | Data Visualization & Charts |
 | Lucide React | Icon Library |
 | @headlessui/react | Accessible UI Components |
+| Vitest | Test Runner |
+| React Testing Library | Component Testing |
 
 ---
 
@@ -237,4 +280,14 @@ npm install
 
 If port 5173 is occupied, Vite will automatically try the next available port. Check the terminal output for the correct URL.
 
----
+### Tests failing
+
+If tests fail unexpectedly, try reinstalling dependencies:
+
+```bash
+rm -rf node_modules
+npm install
+npm test
+```
+
+For more troubleshooting tips related to testing, see the [Testing Documentation](src/tests/README.md#troubleshooting).
