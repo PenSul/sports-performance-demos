@@ -15,7 +15,6 @@ A comprehensive React-based demo application showcasing the UI/UX implementation
 - [Project Structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Troubleshooting](#troubleshooting)
-- [Team Information](#team-information)
 
 ---
 
