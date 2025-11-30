@@ -15,7 +15,6 @@ A comprehensive React-based demo application showcasing the UI/UX implementation
 - [Project Structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Troubleshooting](#troubleshooting)
-- [Team Information](#team-information)
 
 ---
 
@@ -58,7 +57,7 @@ npm --version
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/your-username/sports-performance-analytics.git
+   git clone https://github.com/PenSul/sports-performance-demos.git
    ```
 
 2. **Navigate to the project directory**
